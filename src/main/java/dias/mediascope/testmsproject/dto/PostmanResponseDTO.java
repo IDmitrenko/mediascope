@@ -1,7 +1,9 @@
 package dias.mediascope.testmsproject.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
+@Data
 public class PostmanResponseDTO {
 
     @JsonProperty(value = "url")

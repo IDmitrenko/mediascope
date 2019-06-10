@@ -1,7 +1,10 @@
 package dias.mediascope.testmsproject.service;
 
 import dias.mediascope.testmsproject.dto.PostmanResponseDTO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PostmanServiceImpl implements PostmanService {
 
     private static final String POSTMAN_URL = "https://postman-echo.com/get?foo1=";
@@ -9,6 +12,7 @@ public class PostmanServiceImpl implements PostmanService {
 
     private final ClientUtils clientUtils;
 
+    @Autowired
     public PostmanServiceImpl(ClientUtils clientUtils) {
         this.clientUtils = clientUtils;
     }
